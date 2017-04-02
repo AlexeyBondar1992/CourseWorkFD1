@@ -1,0 +1,162 @@
+.header-footer {
+  display: flex;
+  height: 100%;
+  width: 80%;
+  margin: auto;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-footer a {
+  color: #f3f3f3;
+  font-weight: 300;
+}
+.header-footer-main {
+  width: 100%;
+  min-width: 770px;
+  height: 75px;
+  background-image: url("../images/background/carbon.jpg");
+}
+.menu-text-style {
+  text-decoration: none;
+  color: #FFF;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  transform: skewX(-5deg);
+  font-weight: 400;
+}
+.menu-text-style-hover {
+  text-shadow: 1.3px 1.3px 0 #fff, -0.6px -0.6px 1px #000;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: text-shadow 0.2s 0.1s linear, background-color 0.2s 0.1s linear;
+}
+.menu-text-style-hover a {
+  color: #a4a4a4;
+  transition: color 0.2s 0.1s linear ;
+}
+header {
+  width: 100%;
+  min-width: 770px;
+  height: 75px;
+  background-image: url("../images/background/carbon.jpg");
+  border-bottom: solid 1.5px #000;
+}
+header #header {
+  display: flex;
+  height: 100%;
+  width: 80%;
+  margin: auto;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-shadow: 0.8px 0.8px 1.5px #666, -0.9px -0.9px 0.6px #fff, 0.8px 0.8px 0 #666, -0.7px -0.7px 0 #666;
+  line-height: calc(41.66666667px);
+}
+header #header a {
+  color: #f3f3f3;
+  font-weight: 300;
+}
+header #header > div:nth-child(1) {
+  width: 41%;
+  flex-grow: 0;
+  flex-shrink: 0;
+  font-size: 40pt;
+  font-style: italic;
+  font-family: "BankGothic Md BT", sans-serif;
+  text-shadow: 1.8px 1.8px 0 #989898, 2.2px 2.2px 0 #fff, -0.5px -0.5px 0 #ccc, -0.8px -0.8px 0 #000;
+}
+header #header > div:nth-child(1):hover {
+  text-shadow: 1.3px 1.3px 0 #fff, 1.7px 1.7px 2px #000, -1px -1px 0 #000, -1.3px -1.3px 0 #FFF;
+  transition: text-shadow 0.2s 0.1s linear;
+}
+header #header > div:nth-child(1):hover a {
+  color: #c4c4c4;
+  transition: color 0.2s 0.1s linear ;
+}
+header #header > div:nth-child(2) {
+  display: flex;
+  border-radius: calc(20.83333333px);
+  background-image: linear-gradient(135deg, #0fa9ff 0%, #0fa9ff 49%, #3A62AE 50%, #3A62AE 74%, #ee0028 75%, #ee0028 100%);
+  box-shadow: inset 0 0 3px 2px #000;
+}
+header #header > div:nth-child(2) div {
+  width: 110px;
+  text-align: center;
+  height: calc(41.66666667px);
+}
+header #header > div:nth-child(2) div:first-child {
+  border-top-left-radius: calc(20.83333333px);
+  border-bottom-left-radius: calc(20.83333333px);
+  text-align: left;
+}
+header #header > div:nth-child(2) div:first-child img:first-child {
+  padding: 0 8px 4px 10px;
+}
+header #header > div:nth-child(2) div:last-child {
+  border-top-right-radius: calc(20.83333333px);
+  border-bottom-right-radius: calc(20.83333333px);
+  text-align: right;
+}
+header #header > div:nth-child(2) div:last-child img:last-child {
+  padding: 0 10px 4px 15px;
+}
+header #header > div:nth-child(2) div:hover {
+  text-shadow: 1.3px 1.3px 0 #fff, -0.6px -0.6px 1px #000;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: text-shadow 0.2s 0.1s linear, background-color 0.2s 0.1s linear;
+}
+header #header > div:nth-child(2) div:hover a {
+  color: #a4a4a4;
+  transition: color 0.2s 0.1s linear ;
+}
+header #header a {
+  text-decoration: none;
+  color: #FFF;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  transform: skewX(-5deg);
+  font-weight: 400;
+}
+header #header a img {
+  height: calc(12.5px);
+  width: calc(13.63636364px);
+  transform: skewX(5deg);
+  vertical-align: middle;
+}
+@media all and (max-device-width: 320px) {
+  header {
+    min-width: 320px;
+    width: 320px;
+    position: fixed;
+    height: 70px;
+  }
+  header #header {
+    line-height: 30px;
+    flex-direction: column;
+    width: 100%;
+  }
+  header #header > div:nth-child(1) {
+    margin: 2px;
+    text-align: center;
+    width: 100%;
+    font-size: 26pt;
+  }
+  header #header > div:nth-child(2) {
+    height: 30px;
+    font-size: 12pt;
+    margin: 2px;
+  }
+  header #header > div:nth-child(2) div {
+    width: 77px;
+    height: 30px;
+  }
+  header #header > div:nth-child(2) div img {
+    height: 0;
+    width: 0;
+  }
+  .content {
+    padding-top: 71px;
+  }
+}

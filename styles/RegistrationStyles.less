@@ -1,0 +1,289 @@
+@import "variables";
+@import "HeaderStyles";
+@import "FooterStyles";
+@import "bodyStyles";
+
+.content {
+  width: 75%;
+  margin: auto;
+  .mainFontStyle;
+  & > div {
+    margin: @marginTop 0;
+    .backBlockStyles;
+    form {
+      margin: @marginTop @marginRight;
+      h1 {
+        margin: 0;
+        font-size: 20pt;
+        text-align: center;
+      }
+      h2 {
+        margin: @marginTop 0;
+        font-size: 16pt;
+        text-align: center;
+      }
+      div {
+        display: flex;
+        margin-top: 20px;
+        align-items: baseline;
+        label {
+          text-align: right;
+          flex: 0 0 30%;
+        }
+      }
+      fieldset {
+        margin-left: 30%;
+        width: 70%;
+        max-width: 600px;
+        padding: 0;
+        height: 110px;
+        box-sizing: border-box;
+        div {
+          margin: 12px 0;
+          input {
+            width: 20px;
+          }
+          label {
+            text-align: left;
+            margin-left: 5px;
+          }
+        }
+      }
+      .transmission {
+        border: none;
+        margin-left: 5px;
+        width: 100%;
+        height: 10px;
+        &>div {
+          margin: 0;
+          display: flex;
+          &>div {
+            margin: 0;
+            display: block;
+            height: 80px;
+          }
+        }
+      }
+      input:not([type='checkbox']):not([type='radio']), textarea, select {
+        order: 1;
+      }
+      input[type="text"], #Birth-date, #emailinput, #phone, #country, #OtherInformation, select, #year, #month, #mileage, #regNumber {
+        background-color: rgba(0, 0, 0, 0);
+        border: none;
+        border-bottom: 2px solid #ccc;
+        flex: 0 1 70%;
+        max-width: 600px;
+        height: 25px;
+        margin-left: 5px;
+        padding: 1px 0;
+        box-sizing: inherit;
+        color: #eee;
+        text-shadow: 1px 1px 1px #000, -1px -1px 1px #000;
+        font-size: 13pt;
+        option {
+          background-color: rgba(0, 0, 0, 0.8);
+        }
+      }
+      input[type="text"]:focus, #Birth-date:focus, #emailinput:focus, #phone:focus, #country:focus, #OtherInformation:focus,
+      select:focus, #year:focus, #month:focus, #mileage:focus, #regNumber:focus {
+        outline: none;
+        border-bottom: 2px solid blue;
+      }
+      input:required + label::after, label[for="regNumber"]::after {
+        content: '*';
+        font-size: 16pt;
+        text-shadow: none;
+        color: blue;
+      }
+      .checkbox::before {
+        content: " ";
+        flex: 0 0 30%;
+      }
+      #agree + label {
+        text-align: left;
+        height: 25px;
+        max-width: 570px;
+        flex: 0 1 70%;
+      }
+      .dateOfRelease {
+        & > div:first-child {
+          flex: 0 0 50%;
+          label {
+            flex: 0 0 60%;
+            flex-grow: 0;
+          }
+          #mileage {
+            max-width: 40%;
+          }
+        }
+        & > div:last-child {
+          width: 50%;
+          max-width: calc(~" 600px - 19.5% ");
+          flex-grow: 0;
+          label {
+            flex: 0 0 60%;
+          }
+        }
+      }
+      .regNumber {
+        width: 70%;
+        max-width: 600px;
+        margin-left: 5px;
+        input, select {
+          margin-left: 0;
+        }
+        input:first-of-type {
+          text-align: right;
+        }
+        input[type="text"] {
+          max-width: 40px;
+        }
+      }
+      #image {
+        justify-content: center;
+        position: relative;
+        img {
+          width: 515px;
+        }
+        p {
+          font-family: "Calibri", sans-serif;
+          position: absolute;
+          top: 201px;
+          left: calc(~"50% - 58px");
+          color: #111;
+          text-shadow: 0.5px 0.5px 1px #fff, -0.5px -0.5px 1px #fff;
+          font-size: 26pt;
+          font-weight: 600;
+          letter-spacing: -3.9px;
+          font-stretch: extra-condensed;
+        }
+        p:nth-child(2) {
+          width: 52px;
+          text-align: right;
+          left: calc(~"50% - 4px");
+        }
+        p:nth-child(3) {
+          left: calc(~"50% + 51px");
+        }
+      }
+      input[type="submit"] {
+        cursor: pointer;
+        height: 70px;
+        width: 70px;
+        border: none;
+        background: rgba(0,0,0,0) url("../images/svg/wrench1.svg") no-repeat center;
+        transition: transform 0.4s 0.2s linear;
+      }
+      input[type="submit"]:active, input[type="submit"]:focus {
+        outline: none;
+        transform: rotateZ(360deg);
+        transform-origin: 75% 25%;
+      }
+      input[type="submit"]:hover {
+        background: rgba(0,0,0,0) url("../images/svg/wrench.svg") no-repeat center;
+      }
+      &>div:last-of-type {
+        justify-content: center;
+      }
+    }
+  }
+}
+
+
+@media all and (max-device-width: 320px) {
+  .content {
+    width: 100%;
+    & > div {
+      margin: 0;
+      form {
+        margin: calc(@marginTop/2) calc(@marginRight/2);
+        h1 {
+          font-size: 18pt;
+        }
+        h2 {
+          font-size: 16pt;
+          margin: calc(@marginTop/2) 0;
+        }
+        div {
+          margin: 5px 0;
+          flex-direction: column;
+        }
+        fieldset {
+          margin-left: 0;
+          width: 100%;
+          height: 120px;
+          div {
+            flex-direction: row;
+          }
+        }
+        .transmission {
+          width: 260px;
+          height: 70px;
+          &>div {
+            display: flex;
+            input {
+              flex-shrink: 0;
+            }
+          }
+        }
+        input[type="text"], #Birth-date, #emailinput, #phone, #country, #OtherInformation, select, #year, #month, #mileage, #regNumber {
+          border: 2px solid #ccc;
+          box-sizing: border-box;
+          margin-left: 0;
+          width: 100%;
+          height: 30px;
+        }
+        input[type="text"]:focus, #Birth-date:focus, #emailinput:focus, #phone:focus, #country:focus, #OtherInformation:focus,
+        select:focus, #year:focus, #month:focus, #mileage:focus, #regNumber:focus {
+          border: 2px solid blue;
+        }
+        .checkbox::before {
+          flex: 0 0 0;
+        }
+        .checkbox {
+          flex-direction: row;
+          input {
+            width: 20px;
+            height: 12px;
+          }
+          #agree + label {
+            flex: 1 1 100%;
+          }
+        }
+        .dateOfRelease {
+          & > div:first-child, & > div:last-child {
+            min-width: 100%;
+          #mileage {
+              min-width: 100%;
+            }
+          }
+        }
+        .regNumber {
+          flex-direction: row;
+          width: 100%;
+        }
+        #image {
+          img {
+            width: 285px;
+          }
+          p {
+            top: 105px;
+            left: calc(~"50% - 34px");
+            font-size: 17pt;
+            letter-spacing: -3.9px;
+          }
+          p:nth-child(2) {
+            width: 25px;
+            left: calc(~"50% - 2px");
+          }
+          p:nth-child(3) {
+            left: calc(~"50% + 26px");
+          }
+        }
+        &>div:last-of-type {
+          flex-direction: row;
+        }
+      }
+    }
+  }
+}

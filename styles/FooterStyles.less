@@ -1,0 +1,35 @@
+@import "variables";
+@import "HeaderStyles";
+
+footer {
+  .header-footer-main;
+  border-top: solid 1.5px #000;
+  .footer {
+    .header-footer;
+    font-size: 16pt;
+    color: @mainTextColor;
+    a {
+      .menu-text-style;
+      img {
+        height: calc(@headerHeight / 3.5);
+        transform: skewX(5deg);
+        vertical-align: middle;
+      }
+    }
+  }
+  div>div:nth-child(1) div:nth-child(1):hover, &>div>div:nth-child(2):hover  {
+    .menu-text-style-hover;
+  }
+}
+@media all and (max-device-width: 320px) {
+  footer {
+    min-width: 320px;
+    .footer {
+      font-size: 14pt;
+      width: 90%;
+      a img {
+        height: calc(@headerHeight / 4);
+      }
+    }
+  }
+}

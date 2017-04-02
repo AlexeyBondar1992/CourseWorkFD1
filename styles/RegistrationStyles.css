@@ -1,0 +1,587 @@
+.header-footer {
+  display: flex;
+  height: 100%;
+  width: 80%;
+  margin: auto;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-footer a {
+  color: #f3f3f3;
+  font-weight: 300;
+}
+.header-footer-main {
+  width: 100%;
+  min-width: 770px;
+  height: 75px;
+  background-image: url("../images/background/carbon.jpg");
+}
+.menu-text-style {
+  text-decoration: none;
+  color: #FFF;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  transform: skewX(-5deg);
+  font-weight: 400;
+}
+.menu-text-style-hover {
+  text-shadow: 1.3px 1.3px 0 #fff, -0.6px -0.6px 1px #000;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: text-shadow 0.2s 0.1s linear, background-color 0.2s 0.1s linear;
+}
+.menu-text-style-hover a {
+  color: #a4a4a4;
+  transition: color 0.2s 0.1s linear ;
+}
+header {
+  width: 100%;
+  min-width: 770px;
+  height: 75px;
+  background-image: url("../images/background/carbon.jpg");
+  border-bottom: solid 1.5px #000;
+}
+header #header {
+  display: flex;
+  height: 100%;
+  width: 80%;
+  margin: auto;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-shadow: 0.8px 0.8px 1.5px #666, -0.9px -0.9px 0.6px #fff, 0.8px 0.8px 0 #666, -0.7px -0.7px 0 #666;
+  line-height: calc(41.66666667px);
+}
+header #header a {
+  color: #f3f3f3;
+  font-weight: 300;
+}
+header #header > div:nth-child(1) {
+  width: 41%;
+  flex-grow: 0;
+  flex-shrink: 0;
+  font-size: 40pt;
+  font-style: italic;
+  font-family: "BankGothic Md BT", sans-serif;
+  text-shadow: 1.8px 1.8px 0 #989898, 2.2px 2.2px 0 #fff, -0.5px -0.5px 0 #ccc, -0.8px -0.8px 0 #000;
+}
+header #header > div:nth-child(1):hover {
+  text-shadow: 1.3px 1.3px 0 #fff, 1.7px 1.7px 2px #000, -1px -1px 0 #000, -1.3px -1.3px 0 #FFF;
+  transition: text-shadow 0.2s 0.1s linear;
+}
+header #header > div:nth-child(1):hover a {
+  color: #c4c4c4;
+  transition: color 0.2s 0.1s linear ;
+}
+header #header > div:nth-child(2) {
+  display: flex;
+  border-radius: calc(20.83333333px);
+  background-image: linear-gradient(135deg, #0fa9ff 0%, #0fa9ff 49%, #3A62AE 50%, #3A62AE 74%, #ee0028 75%, #ee0028 100%);
+  box-shadow: inset 0 0 3px 2px #000;
+}
+header #header > div:nth-child(2) div {
+  width: 110px;
+  text-align: center;
+  height: calc(41.66666667px);
+}
+header #header > div:nth-child(2) div:first-child {
+  border-top-left-radius: calc(20.83333333px);
+  border-bottom-left-radius: calc(20.83333333px);
+  text-align: left;
+}
+header #header > div:nth-child(2) div:first-child img:first-child {
+  padding: 0 8px 4px 10px;
+}
+header #header > div:nth-child(2) div:last-child {
+  border-top-right-radius: calc(20.83333333px);
+  border-bottom-right-radius: calc(20.83333333px);
+  text-align: right;
+}
+header #header > div:nth-child(2) div:last-child img:last-child {
+  padding: 0 10px 4px 15px;
+}
+header #header > div:nth-child(2) div:hover {
+  text-shadow: 1.3px 1.3px 0 #fff, -0.6px -0.6px 1px #000;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: text-shadow 0.2s 0.1s linear, background-color 0.2s 0.1s linear;
+}
+header #header > div:nth-child(2) div:hover a {
+  color: #a4a4a4;
+  transition: color 0.2s 0.1s linear ;
+}
+header #header a {
+  text-decoration: none;
+  color: #FFF;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  transform: skewX(-5deg);
+  font-weight: 400;
+}
+header #header a img {
+  height: calc(12.5px);
+  width: calc(13.63636364px);
+  transform: skewX(5deg);
+  vertical-align: middle;
+}
+@media all and (max-device-width: 320px) {
+  header {
+    min-width: 320px;
+    width: 320px;
+    position: fixed;
+    height: 70px;
+  }
+  header #header {
+    line-height: 30px;
+    flex-direction: column;
+    width: 100%;
+  }
+  header #header > div:nth-child(1) {
+    margin: 2px;
+    text-align: center;
+    width: 100%;
+    font-size: 26pt;
+  }
+  header #header > div:nth-child(2) {
+    height: 30px;
+    font-size: 12pt;
+    margin: 2px;
+  }
+  header #header > div:nth-child(2) div {
+    width: 77px;
+    height: 30px;
+  }
+  header #header > div:nth-child(2) div img {
+    height: 0;
+    width: 0;
+  }
+  .content {
+    padding-top: 71px;
+  }
+}
+footer {
+  width: 100%;
+  min-width: 770px;
+  height: 75px;
+  background-image: url("../images/background/carbon.jpg");
+  border-top: solid 1.5px #000;
+}
+footer .footer {
+  display: flex;
+  height: 100%;
+  width: 80%;
+  margin: auto;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16pt;
+  color: #FFF;
+}
+footer .footer a {
+  color: #f3f3f3;
+  font-weight: 300;
+}
+footer .footer a {
+  text-decoration: none;
+  color: #FFF;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  transform: skewX(-5deg);
+  font-weight: 400;
+}
+footer .footer a img {
+  height: calc(21.42857143px);
+  transform: skewX(5deg);
+  vertical-align: middle;
+}
+footer div > div:nth-child(1) div:nth-child(1):hover,
+footer > div > div:nth-child(2):hover {
+  text-shadow: 1.3px 1.3px 0 #fff, -0.6px -0.6px 1px #000;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: text-shadow 0.2s 0.1s linear, background-color 0.2s 0.1s linear;
+}
+footer div > div:nth-child(1) div:nth-child(1):hover a,
+footer > div > div:nth-child(2):hover a {
+  color: #a4a4a4;
+  transition: color 0.2s 0.1s linear ;
+}
+@media all and (max-device-width: 320px) {
+  footer {
+    min-width: 320px;
+  }
+  footer .footer {
+    font-size: 14pt;
+    width: 90%;
+  }
+  footer .footer a img {
+    height: calc(18.75px);
+  }
+}
+body {
+  margin: 0;
+  font-family: "segoe UI", sans-serif;
+  font-size: 14pt;
+  min-height: 100vh;
+  min-width: 770px;
+  background-image: url("../images/background/skin2.png");
+  background-size: 520px auto;
+  display: flex;
+  flex-direction: column;
+}
+body .content {
+  flex-grow: 1;
+}
+body #history {
+  width: 75%;
+  margin: auto;
+}
+@media all and (max-device-width: 320px) {
+  body {
+    min-width: 320px;
+  }
+}
+.backBlockStyles {
+  background-color: rgba(0, 0, 0, 0.4);
+  border: solid 0.5px #111;
+  box-shadow: 0 0 20px 2px #111, inset 0 0 10px #555;
+}
+.mainFontStyle {
+  color: #FFF;
+  text-shadow: 1px 1px 1px #000, -1px -1px 1px #000;
+}
+.content {
+  width: 75%;
+  margin: auto;
+  color: #FFF;
+  text-shadow: 1px 1px 1px #000, -1px -1px 1px #000;
+}
+.content > div {
+  margin: 20px 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  border: solid 0.5px #111;
+  box-shadow: 0 0 20px 2px #111, inset 0 0 10px #555;
+}
+.content > div form {
+  margin: 20px 30px;
+}
+.content > div form h1 {
+  margin: 0;
+  font-size: 20pt;
+  text-align: center;
+}
+.content > div form h2 {
+  margin: 20px 0;
+  font-size: 16pt;
+  text-align: center;
+}
+.content > div form div {
+  display: flex;
+  margin-top: 20px;
+  align-items: baseline;
+}
+.content > div form div label {
+  text-align: right;
+  flex: 0 0 30%;
+}
+.content > div form fieldset {
+  margin-left: 30%;
+  width: 70%;
+  max-width: 600px;
+  padding: 0;
+  height: 110px;
+  box-sizing: border-box;
+}
+.content > div form fieldset div {
+  margin: 12px 0;
+}
+.content > div form fieldset div input {
+  width: 20px;
+}
+.content > div form fieldset div label {
+  text-align: left;
+  margin-left: 5px;
+}
+.content > div form .transmission {
+  border: none;
+  margin-left: 5px;
+  width: 100%;
+  height: 10px;
+}
+.content > div form .transmission > div {
+  margin: 0;
+  display: flex;
+}
+.content > div form .transmission > div > div {
+  margin: 0;
+  display: block;
+  height: 80px;
+}
+.content > div form input:not([type='checkbox']):not([type='radio']),
+.content > div form textarea,
+.content > div form select {
+  order: 1;
+}
+.content > div form input[type="text"],
+.content > div form #Birth-date,
+.content > div form #emailinput,
+.content > div form #phone,
+.content > div form #country,
+.content > div form #OtherInformation,
+.content > div form select,
+.content > div form #year,
+.content > div form #month,
+.content > div form #mileage,
+.content > div form #regNumber {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  border-bottom: 2px solid #ccc;
+  flex: 0 1 70%;
+  max-width: 600px;
+  height: 25px;
+  margin-left: 5px;
+  padding: 1px 0;
+  box-sizing: inherit;
+  color: #eee;
+  text-shadow: 1px 1px 1px #000, -1px -1px 1px #000;
+  font-size: 13pt;
+}
+.content > div form input[type="text"] option,
+.content > div form #Birth-date option,
+.content > div form #emailinput option,
+.content > div form #phone option,
+.content > div form #country option,
+.content > div form #OtherInformation option,
+.content > div form select option,
+.content > div form #year option,
+.content > div form #month option,
+.content > div form #mileage option,
+.content > div form #regNumber option {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.content > div form input[type="text"]:focus,
+.content > div form #Birth-date:focus,
+.content > div form #emailinput:focus,
+.content > div form #phone:focus,
+.content > div form #country:focus,
+.content > div form #OtherInformation:focus,
+.content > div form select:focus,
+.content > div form #year:focus,
+.content > div form #month:focus,
+.content > div form #mileage:focus,
+.content > div form #regNumber:focus {
+  outline: none;
+  border-bottom: 2px solid blue;
+}
+.content > div form input:required + label::after,
+.content > div form label[for="regNumber"]::after {
+  content: '*';
+  font-size: 16pt;
+  text-shadow: none;
+  color: blue;
+}
+.content > div form .checkbox::before {
+  content: " ";
+  flex: 0 0 30%;
+}
+.content > div form #agree + label {
+  text-align: left;
+  height: 25px;
+  max-width: 570px;
+  flex: 0 1 70%;
+}
+.content > div form .dateOfRelease > div:first-child {
+  flex: 0 0 50%;
+}
+.content > div form .dateOfRelease > div:first-child label {
+  flex: 0 0 60%;
+  flex-grow: 0;
+}
+.content > div form .dateOfRelease > div:first-child #mileage {
+  max-width: 40%;
+}
+.content > div form .dateOfRelease > div:last-child {
+  width: 50%;
+  max-width: calc( 600px - 19.5% );
+  flex-grow: 0;
+}
+.content > div form .dateOfRelease > div:last-child label {
+  flex: 0 0 60%;
+}
+.content > div form .regNumber {
+  width: 70%;
+  max-width: 600px;
+  margin-left: 5px;
+}
+.content > div form .regNumber input,
+.content > div form .regNumber select {
+  margin-left: 0;
+}
+.content > div form .regNumber input:first-of-type {
+  text-align: right;
+}
+.content > div form .regNumber input[type="text"] {
+  max-width: 40px;
+}
+.content > div form #image {
+  justify-content: center;
+  position: relative;
+}
+.content > div form #image img {
+  width: 515px;
+}
+.content > div form #image p {
+  font-family: "Calibri", sans-serif;
+  position: absolute;
+  top: 201px;
+  left: calc(50% - 58px);
+  color: #111;
+  text-shadow: 0.5px 0.5px 1px #fff, -0.5px -0.5px 1px #fff;
+  font-size: 26pt;
+  font-weight: 600;
+  letter-spacing: -3.9px;
+  font-stretch: extra-condensed;
+}
+.content > div form #image p:nth-child(2) {
+  width: 52px;
+  text-align: right;
+  left: calc(50% - 4px);
+}
+.content > div form #image p:nth-child(3) {
+  left: calc(50% + 51px);
+}
+.content > div form input[type="submit"] {
+  cursor: pointer;
+  height: 70px;
+  width: 70px;
+  border: none;
+  background: rgba(0, 0, 0, 0) url("../images/svg/wrench1.svg") no-repeat center;
+  transition: transform 0.4s 0.2s linear;
+}
+.content > div form input[type="submit"]:active,
+.content > div form input[type="submit"]:focus {
+  outline: none;
+  transform: rotateZ(360deg);
+  transform-origin: 75% 25%;
+}
+.content > div form input[type="submit"]:hover {
+  background: rgba(0, 0, 0, 0) url("../images/svg/wrench.svg") no-repeat center;
+}
+.content > div form > div:last-of-type {
+  justify-content: center;
+}
+@media all and (max-device-width: 320px) {
+  .content {
+    width: 100%;
+  }
+  .content > div {
+    margin: 0;
+  }
+  .content > div form {
+    margin: calc(10px) calc(15px);
+  }
+  .content > div form h1 {
+    font-size: 18pt;
+  }
+  .content > div form h2 {
+    font-size: 16pt;
+    margin: calc(10px) 0;
+  }
+  .content > div form div {
+    margin: 5px 0;
+    flex-direction: column;
+  }
+  .content > div form fieldset {
+    margin-left: 0;
+    width: 100%;
+    height: 120px;
+  }
+  .content > div form fieldset div {
+    flex-direction: row;
+  }
+  .content > div form .transmission {
+    width: 260px;
+    height: 70px;
+  }
+  .content > div form .transmission > div {
+    display: flex;
+  }
+  .content > div form .transmission > div input {
+    flex-shrink: 0;
+  }
+  .content > div form input[type="text"],
+  .content > div form #Birth-date,
+  .content > div form #emailinput,
+  .content > div form #phone,
+  .content > div form #country,
+  .content > div form #OtherInformation,
+  .content > div form select,
+  .content > div form #year,
+  .content > div form #month,
+  .content > div form #mileage,
+  .content > div form #regNumber {
+    border: 2px solid #ccc;
+    box-sizing: border-box;
+    margin-left: 0;
+    width: 100%;
+    height: 30px;
+  }
+  .content > div form input[type="text"]:focus,
+  .content > div form #Birth-date:focus,
+  .content > div form #emailinput:focus,
+  .content > div form #phone:focus,
+  .content > div form #country:focus,
+  .content > div form #OtherInformation:focus,
+  .content > div form select:focus,
+  .content > div form #year:focus,
+  .content > div form #month:focus,
+  .content > div form #mileage:focus,
+  .content > div form #regNumber:focus {
+    border: 2px solid blue;
+  }
+  .content > div form .checkbox::before {
+    flex: 0 0 0;
+  }
+  .content > div form .checkbox {
+    flex-direction: row;
+  }
+  .content > div form .checkbox input {
+    width: 20px;
+    height: 12px;
+  }
+  .content > div form .checkbox #agree + label {
+    flex: 1 1 100%;
+  }
+  .content > div form .dateOfRelease > div:first-child,
+  .content > div form .dateOfRelease > div:last-child {
+    min-width: 100%;
+  }
+  .content > div form .dateOfRelease > div:first-child #mileage,
+  .content > div form .dateOfRelease > div:last-child #mileage {
+    min-width: 100%;
+  }
+  .content > div form .regNumber {
+    flex-direction: row;
+    width: 100%;
+  }
+  .content > div form #image img {
+    width: 285px;
+  }
+  .content > div form #image p {
+    top: 105px;
+    left: calc(50% - 34px);
+    font-size: 17pt;
+    letter-spacing: -3.9px;
+  }
+  .content > div form #image p:nth-child(2) {
+    width: 25px;
+    left: calc(50% - 2px);
+  }
+  .content > div form #image p:nth-child(3) {
+    left: calc(50% + 26px);
+  }
+  .content > div form > div:last-of-type {
+    flex-direction: row;
+  }
+}

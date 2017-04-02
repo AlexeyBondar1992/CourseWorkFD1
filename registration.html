@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Registration</title>
+    <link rel="stylesheet" type="text/css" href="styles/RegistrationStyles.css">
+</head>
+<body>
+<header>
+    <div id="header">
+        <div><a href="index.html">7-series</a></div>
+        <div class="menu">
+            <div><a href="index.html"><img src="images/svg/circlered.svg">Главная</a></div>
+            <div><a href="7history.html">История</a></div>
+            <div><a href="videos.html">Видео</a></div>
+            <div><a href="registration.html">Вход<img src="images/svg/circleblue.svg"></a></div>
+        </div>
+    </div>
+</header>
+<div class="content">
+    <div>
+        <form method="get">
+            <h1>Зарегистрируйтесь на сайте</h1>
+            <h2>Ваши данные:</h2>
+            <div>
+                <input type="text" placeholder="Иван" id="Firstname" name="firstname" required>
+                <label for="Firstname">Имя</label>
+            </div>
+            <div>
+                <input type="text" placeholder="Иванов" id="Lastname" name="Lastname" required>
+                <label for="Lastname">Фамилия</label>
+            </div>
+            <div>
+                <input type="text" placeholder="Иванович" id="Surname" name="Surname">
+                <label for="Surname">Отчество</label>
+            </div>
+            <div>
+                <input type="date" id="Birth-date" name="Birth-date" required>
+                <label for="Birth-date">Дата рождения</label>
+            </div>
+            <fieldset>
+                <legend>Пол</legend>
+                <div>
+                    <input type="radio" name="gender" value="male" id="gendermale">
+                    <label for="gendermale"> Мужской</label>
+                </div>
+                <div>
+                    <input type="radio" name="gender" value="female" id="genderfemale" checked>
+                    <label for="genderfemale"> Женский</label>
+                </div>
+            </fieldset>
+            <div>
+                <input type="email" placeholder="e-mail-adress@gmail.com" id="emailinput" name="email" required>
+                <label for="emailinput">E-mail</label>
+            </div>
+            <div>
+                <input type="tel" id="phone" placeholder="+375293333333" name="phone-number">
+                <label for="phone">Номер телефона</label>
+            </div>
+            <h2>Ваш автомобиль:</h2>
+            <div>
+                <label for="model"> Модель автомобиля </label>
+                <select name="model" id="model">
+                    <option value="e23" selected>7-series e23 (1977-1986)</option>
+                    <option value="e32">7-series e32 (1986-1994)</option>
+                    <option value="e38">7-series e38 (1994-2001)</option>
+                    <option value="e65">7-series e65 (2001-2008)</option>
+                    <option value="f01">7-series f01 (2008-2015)</option>
+                </select>
+            </div>
+            <div class="dateOfRelease">
+                <div>
+                    <input type="number" id="year" placeholder="1977" name="year" min="1977" max="1986" maxlength="4" required>
+                    <label for="year">Год выпуска автомобиля</label>
+                </div>
+                <div>
+                    <select name="month" id="month">
+                        <option value="January" selected>Январь</option>
+                        <option value="February">Февраль</option>
+                        <option value="March">Март</option>
+                        <option value="April">Апрель</option>
+                        <option value="May">Май</option>
+                        <option value="June">Июнь</option>
+                        <option value="July">Июль</option>
+                        <option value="August">Август</option>
+                        <option value="September">Сентябрь</option>
+                        <option value="October">Октябрь</option>
+                        <option value="November">Ноябрь</option>
+                        <option value="December">Декабрь</option>
+                    </select>
+                    <label for="month">Месяц выпуска автомобиля</label>
+                </div>
+            </div>
+            <div class="dateOfRelease">
+                <div>
+                    <input type="number" id="mileage" placeholder="165000" name="mileage" max="1999999" maxlength="7">
+                    <label for="mileage">Пробег автомобиля, км</label>
+                </div>
+                <div>
+                    <fieldset class="transmission">
+                        <div>
+                            <legend>Тип коробки передач</legend>
+                            <div>
+                                <div>
+                                    <input type="radio" name="transmission" value="Automatic" id="Automatic">
+                                    <label for="Automatic"> Автомат</label>
+                                </div>
+                                <div>
+                                    <input type="radio" name="transmission" value="Mechanic" id="Mechanic" checked>
+                                    <label for="Mechanic"> Механика</label>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+            <div>
+                <label for="regNumber">Регистрационный номер</label>
+                <div class="regNumber">
+                    <input type="number" id="regNumber" placeholder="0000" name="regNumber" pattern="[0-9]{4}" required>
+                    <input type="text" id="series" placeholder="МI" name="series" maxlength="2" required>
+                    <select name="region" id="region">
+                        <option value="1" selected>- 1</option>
+                        <option value="2">- 2</option>
+                        <option value="3">- 3</option>
+                        <option value="4">- 4</option>
+                        <option value="5">- 5</option>
+                        <option value="6">- 6</option>
+                        <option value="7">- 7</option>
+                    </select>
+                </div>
+            </div>
+            <div id="image">
+                <img src="images/form/e23.jpg">
+                <div>
+                    <p>0000</p>
+                    <p>MI</p>
+                    <p>-1</p>
+                </div>
+            </div>
+            <div>
+                <textarea id="OtherInformation" name="OtherInformation"></textarea>
+                <label for="OtherInformation">Дополнительная информация</label>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" name="agreement" id="agree" required>
+                <label for="agree"> Я принимаю <a href="https://www.google.com"> условия соглашения </a>
+                </label>
+            </div>
+            <div><input type="submit" value=" "></div>
+        </form>
+    </div>
+</div>
+<footer>
+    <div class="footer">
+        <div>
+            <div><a href="https://vk.com/id19618412" target="_blank">Alexey Bondar <img src="images/svg/vk.svg"></a>
+            </div>
+            <div>copyright © 2017</div>
+        </div>
+        <div><a href="#header">Наверх</a></div>
+    </div>
+</footer>
+<script src="apps/formApp.js"></script>
+</body>
+</html>

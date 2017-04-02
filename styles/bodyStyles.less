@@ -1,0 +1,35 @@
+@import "variables";
+
+body {
+  margin: 0;
+  font-family: "segoe UI", sans-serif;
+  font-size: 14pt;
+  min-height: 100vh;
+  min-width: 770px;
+  background-image: url("../images/background/skin2.png");
+  background-size: 520px auto;
+  display: flex;
+  flex-direction: column;
+  .content {
+    flex-grow: 1;
+  }
+  #history {
+    width: 75%;
+    margin: auto;
+  }
+}
+@media all and (max-device-width: 320px) {
+  body {
+    min-width: 320px;
+  }
+}
+
+.backBlockStyles {
+  background-color: rgba(0, 0, 0, 0.4);
+  border: solid 0.5px #111;
+  box-shadow: 0 0 20px 2px #111, inset 0 0 10px #555;
+}
+.mainFontStyle {
+  color: @mainTextColor;
+  text-shadow: 1px 1px 1px #000, -1px -1px 1px #000;
+}

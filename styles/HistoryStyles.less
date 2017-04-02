@@ -1,0 +1,213 @@
+@import "variables";
+@import "HeaderStyles";
+@import "FooterStyles";
+@import "bodyStyles";
+
+.pointer {
+  pointer-events: none;
+}
+
+.gallery-transform-back {
+  transform: translateX(-160px) !important;
+  transition: transform 1s linear!important;
+  figure {
+    transition: width 1s linear, font-size 1s linear !important;
+    img {
+      transition: height 1s linear!important;
+    }
+  }
+}
+
+.gallery-move-back {
+  transform: translateX(160px);
+}
+
+.gallery-transform-forward {
+  transform: translateX(160px) !important;
+  transition: transform 1s linear!important;
+  figure {
+    transition: width 1s linear, font-size 1s linear !important;
+    img {
+      transition: height 1s linear!important;
+    }
+  }
+}
+
+.gallery-move-forward {
+  transform: translateX(-160px);
+}
+
+.second-figure {
+  figure {
+    width: 530px !important;
+    font-size: 20pt !important;
+    img {
+      height: 320px !important;
+    }
+  }
+}
+
+.first-figure {
+  figure {
+    width: 260px !important;
+    font-size: 14pt !important;
+    img {
+      height: 150px !important;
+    }
+  }
+}
+
+#gallery {
+  width: 95%;
+  height: 400px;
+  overflow: hidden;
+  margin: @marginTop auto 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .backBlockStyles;
+  a {
+    transition: transform 0.4s 0.1s linear, color 0.4s 0.1s linear, text-shadow 0.4s 0.1s linear;
+    text-decoration: none;
+    color: @back2color;
+    text-align: center;
+    font-weight: 600;
+    text-shadow: 1px 1px 1px #000, -1px -1px 1px #000;
+    font-style: italic;
+  }
+  figure {
+    display: none;
+    margin: @marginTop @marginRight;
+  }
+  .first > figure, .third > figure {
+    display: block;
+    width: 260px;
+    img {
+      height: 150px;
+    }
+  }
+  .second > figure {
+    display: block;
+    font-size: 20pt;
+    width: 530px;
+    img {
+      height: 320px;
+    }
+  }
+  a:hover {
+    color: lighten(@back1MColor, 5%);
+    text-shadow: 1px 1px 0 #000, -0.5px -0.5px 0 #fff;
+    transform: scale(1.5);
+  }
+  .second:hover {
+    transform: scale(1.1);
+  }
+
+}
+
+#history {
+  top: 440px;
+  .mainFontStyle;
+  h1 {
+    line-height: 40px;
+    font-size: 28pt;
+    font-style: italic;
+    color: @headerTextColor;
+    padding: @marginTop @marginRight;
+    margin: 0;
+  }
+  h2 {
+    line-height: 35px;
+    font-size: 22pt;
+    font-style: italic;
+    padding: calc(@marginTop / 2) @marginRight;
+    margin: 0;
+  }
+  p {
+    margin: 0;
+    text-align: justify;
+    text-indent: @marginRight;
+    font-weight: 500;
+  }
+  & > div:not(:target) > :not(h1) {
+    display: none;
+  }
+  & > div:not(:target) > h1 {
+    color: darken(@headerTextColor, 30%);
+    padding-bottom: 0;
+  }
+  table {
+    margin: auto;
+    border-spacing: 0;
+    tr:first-child td {
+      padding: 0 calc(@marginRight / 5);
+    }
+    td {
+      text-align: center;
+      border-bottom: 1px solid #fff;
+    }
+    td:first-child {
+      text-align: left;
+    }
+  }
+  table:not(:first-of-type) {
+    margin: 0;
+    td:not(:first-child) {
+      width: 100px;
+    }
+  }
+  div {
+    & > img:nth-of-type(n) {
+      float: right;
+      width: 350px;
+      padding: 10px 0 10px 10px;
+    }
+    & > img:nth-of-type(2n) {
+      float: left;
+      width: 350px;
+      padding: 10px 10px 10px 0;
+    }
+  }
+}
+
+@media all and (max-device-width: 320px) {
+  .content {
+    #history {
+      h1 {
+        font-size: 20pt;
+        padding-top: 2px;
+        padding-bottom: 2px;
+      }
+      font-size: 12pt;
+      width: 95%;
+      div img:nth-of-type(n), div img:nth-of-type(2n) {
+        width: 305px;
+      }
+      table {
+        font-size: 6.1pt;
+      }
+    }
+
+    #gallery {
+      height: 200px;
+      overflow: scroll;
+      justify-content: flex-start;
+      .buttonMedia {
+        figure {
+          display: block;
+          width: 250px;
+          margin-left: 0;
+          margin-right: 0;
+          img {
+            height: 140px;
+          }
+          figcaption {
+            font-size: 12pt;
+          }
+        }
+
+      }
+    }
+
+  }
+}
