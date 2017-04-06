@@ -36,6 +36,7 @@
   transition: color 0.2s 0.1s linear ;
 }
 header {
+  z-index: 5;
   width: 100%;
   min-width: 770px;
   height: 75px;
@@ -583,5 +584,8 @@ body #history {
   }
   .content > div form > div:last-of-type {
     flex-direction: row;
+  }
+  .content > div form select > option {
+    width: 284px;
   }
 }

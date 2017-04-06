@@ -252,3 +252,109 @@ body #history {
   color: #FFF;
   text-shadow: 1px 1px 1px #000, -1px -1px 1px #000;
 }
+.content {
+  width: 80%;
+  margin: auto;
+}
+.content > div {
+  position: relative;
+  margin: 20px 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 390px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border: solid 0.5px #111;
+  box-shadow: 0 0 20px 2px #111, inset 0 0 10px #555;
+}
+.content > div ::-webkit-scrollbar-track {
+  background-color: #ecedee;
+}
+.content > div ::-webkit-scrollbar-thumb {
+  background-color: #777;
+}
+.content > div ::-webkit-scrollbar-thumb:hover {
+  background-color: #333;
+}
+.content > div ::-webkit-scrollbar {
+  width: 5px;
+}
+.content > div > h1 {
+  color: #FFF;
+  text-shadow: 1px 1px 1px #000, -1px -1px 1px #000;
+  text-align: center;
+  margin: 0;
+  height: 40px;
+  font-size: 28pt;
+  font-family: "BankGothic Md BT", sans-serif;
+  letter-spacing: -2px;
+  font-style: italic;
+}
+.content > div > iframe {
+  position: absolute;
+  top: 50px;
+  left: 10px;
+  width: 560px;
+  height: 320px;
+}
+.content > div > section {
+  position: absolute;
+  right: 10px;
+  top: 50px;
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  width: calc( 100% - 590px );
+  overflow: scroll;
+  overflow-x: hidden;
+}
+.content > div > section span {
+  width: 95%;
+  height: auto;
+  margin: 5px 0 ;
+  opacity: 0.8;
+}
+.content > div > section span img {
+  width: 100%;
+  border: solid 0.5px #777;
+  box-shadow: 0 0 5px #777, inset 0 0 3px #444;
+}
+.content > div > section span:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+.content > div > section span:focus {
+  opacity: .5;
+}
+@media all and (max-device-width: 320px) {
+  .content {
+    width: 100%;
+  }
+  .content > div {
+    height: 410px;
+  }
+  .content > div > iframe {
+    top: 45px;
+    left: 5px;
+    width: 310px;
+    height: 240px;
+  }
+  .content > div > section {
+    right: 5px;
+    top: 300px;
+    height: 100px;
+    flex-direction: row;
+    width: 100%;
+    overflow-y: hidden;
+    overflow-x: visible;
+  }
+  .content > div > section span {
+    width: 95%;
+    height: auto;
+    margin: 5px 0 ;
+    opacity: 0.8;
+  }
+  .content > div > section span img {
+    height: 100%;
+    width: auto;
+  }
+}

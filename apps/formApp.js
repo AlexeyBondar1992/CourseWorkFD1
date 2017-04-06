@@ -23,9 +23,10 @@ function yearChange(model) {
 }
 
 function yearChanger(yearStart,yearEnd) {
-    document.querySelector('#year').setAttribute('min',yearStart );
-    document.querySelector('#year').setAttribute('max',yearEnd );
-    document.querySelector('#year').setAttribute('placeholder',yearStart );
+    var year = document.querySelector('#year');
+    year.setAttribute('min',yearStart );
+    year.setAttribute('max',yearEnd );
+    year.setAttribute('placeholder',yearStart );
 }
 
 function clickListenerForModel(event) {
